@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/AppTheme"
+    >
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="60dp"
+        app:startIconDrawable="@drawable/ic_perm_identity_gray_smaller"
+        android:hint="@string/first_name_hint"
+        android:textColorHint="@color/colorPrimaryDark"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/AppTheme.ContactForm.EditText"
+
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>
