@@ -18,6 +18,11 @@ public class ContactFormActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBinding = CfaLayoutBinding.inflate(getLayoutInflater());
+        setContentView(mBinding.getRoot());
+    }
+
+    public void onButtonClick(View view) {
+
     }
 
     // TODO 06. Create a new method that reads the values in the several EditText elements of the layout and then uses the Contact class to send those data to ContactInfoActivity
