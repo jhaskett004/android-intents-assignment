@@ -12,21 +12,41 @@
 
     <!-- Style of the thumbnail images used for the fields -->
     <style name="AppTheme.ImageView">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">30dp</item>
         <item name="tint">@color/colorDarkGray</item>
+    </style>
+
+    <style name="EditText_Parent">
+        <item name="android:layout_width">285dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:textColorHint">@color/colorPrimaryDark</item>
+        <item name="boxBackgroundColor">@color/colorLightGray</item>
+
     </style>
 
     <!-- Style of the EditText elements used in the Contact Form activity -->
     <style name="AppTheme.ContactForm.EditText" parent="Widget.AppCompat.EditText">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginBottom">24dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
 
     <!-- Style of the Button used in the Contact Form activity -->
     <style name="AppTheme.ContactForm.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">285dp</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="backgroundTint">@color/colorBlue</item>
         <item name="android:textStyle">bold</item>
         <item name="android:padding">12dp</item>
+    </style>
+
+    <style name="CIA_contact_name_style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textColor">@color/colorDarkGray</item>
     </style>
 
     <!-- Style of the TextView elements used in the Contact Info activity -->
@@ -40,7 +60,7 @@
     <style name="AppTheme.ContactInfo.HorizontalDivider" parent="AppTheme">
         <item name="android:layout_height">1dp</item>
         <item name="android:layout_width">0dp</item>
-        <item name="android:background">@color/colorLightGray</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
         <item name="android:layout_marginTop">16dp</item>
         <item name="android:layout_marginBottom">16dp</item>
     </style>

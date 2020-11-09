@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--03. Create a new layout file to define the GUI elements of the ContactInfoActivity.-->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/CIA_root_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/AppTheme">
+
+
+    <ImageView
+        android:id="@+id/circle_drawable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/ic_person"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/CIA_first_name"
+        style="@style/CIA_contact_name_style"
+        android:layout_marginTop="15dp"
+        android:text="Ivan Rodriquez-Conde"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circle_drawable" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CIA_first_name">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/ChipGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleLine="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/call_chip"
+                style="@style/AppTheme.ContactInfo.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                app:chipIcon="@drawable/ic_phone_black_24dp"
+                android:text="@string/call_button_label" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/text_chip"
+                style="@style/AppTheme.ContactInfo.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipIcon="@drawable/ic_textsms_black_24dp"
+                android:text="@string/text_button_label" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/email_chip"
+                style="@style/AppTheme.ContactInfo.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipIcon="@drawable/ic_email_black_24dp"
+                android:text="@string/email_button_label" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/map_chip"
+                style="@style/AppTheme.ContactInfo.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipIcon="@drawable/ic_directions_black_24dp"
+                android:text="@string/directions_button_label" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/web_chip"
+                style="@style/AppTheme.ContactInfo.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipIcon="@drawable/ic_public_black_24dp"
+                android:text="@string/web_button_label" />
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/CIA_phone_ImageView"
+        style="@style/AppTheme.ImageView"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_phone_black_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_scroll" />
+
+    <TextView
+        android:id="@+id/CIA_phoneNumber"
+        style="@style/AppTheme.ContactInfo.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="123456789"
+        app:layout_constraintStart_toEndOf="@+id/CIA_phone_ImageView"
+        app:layout_constraintTop_toTopOf="@+id/CIA_phone_ImageView" />
+
+    <View
+        android:id="@+id/view"
+        style="@style/AppTheme.ContactInfo.HorizontalDivider"
+        app:layout_constraintStart_toStartOf="@+id/CIA_phoneNumber"
+        app:layout_constraintTop_toBottomOf="@+id/CIA_phoneNumber" />
+
+    <ImageView
+        android:id="@+id/CIA_email_ImageView"
+        style="@style/AppTheme.ImageView"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_email_black_24dp"
+        app:layout_constraintStart_toStartOf="@+id/CIA_phone_ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/CIA_email_address"
+        style="@style/AppTheme.ContactInfo.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="irconde@ualr.edu"
+        app:layout_constraintStart_toStartOf="@+id/CIA_phoneNumber"
+        app:layout_constraintTop_toTopOf="@+id/CIA_email_ImageView" />
+
+    <View
+        android:id="@+id/view2"
+        style="@style/AppTheme.ContactInfo.HorizontalDivider"
+        app:layout_constraintStart_toStartOf="@+id/CIA_email_address"
+        app:layout_constraintTop_toBottomOf="@+id/CIA_email_address" />
+
+    <ImageView
+        android:id="@+id/CIA_location_ImageView"
+        style="@style/AppTheme.ImageView"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_place_black_24dp"
+        app:layout_constraintStart_toStartOf="@+id/CIA_email_ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/CIA_location"
+        style="@style/AppTheme.ContactInfo.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="S. University Avenue"
+        app:layout_constraintStart_toStartOf="@+id/CIA_email_address"
+        app:layout_constraintTop_toTopOf="@+id/CIA_location_ImageView" />
+
+    <View
+        android:id="@+id/view3"
+        style="@style/AppTheme.ContactInfo.HorizontalDivider"
+        app:layout_constraintStart_toStartOf="@+id/CIA_location"
+        app:layout_constraintTop_toBottomOf="@+id/CIA_location" />
+
+    <ImageView
+        android:id="@+id/CIA_website_ImageView"
+        style="@style/AppTheme.ImageView"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_public_black_24dp"
+        app:layout_constraintStart_toStartOf="@+id/CIA_location_ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <TextView
+        android:id="@+id/CIA_website"
+        style="@style/AppTheme.ContactInfo.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="www.ualr.edu"
+        app:layout_constraintStart_toStartOf="@+id/CIA_location"
+        app:layout_constraintTop_toTopOf="@+id/CIA_website_ImageView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
