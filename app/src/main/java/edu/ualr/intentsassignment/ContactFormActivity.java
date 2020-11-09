@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.content.Context;
 
 import edu.ualr.intentsassignment.databinding.CfaLayoutBinding;
 import edu.ualr.intentsassignment.model.Contact;
