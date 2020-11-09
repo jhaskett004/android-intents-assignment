@@ -23,7 +23,7 @@
 
 
     <TextView
-        android:id="@+id/CIA_first_name"
+        android:id="@+id/CIA_full_name"
         style="@style/CIA_contact_name_style"
         android:layout_marginTop="15dp"
         android:text="Ivan Rodriquez-Conde"
@@ -39,7 +39,7 @@
         android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CIA_first_name">
+        app:layout_constraintTop_toBottomOf="@+id/CIA_full_name">
 
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/ChipGroup"
